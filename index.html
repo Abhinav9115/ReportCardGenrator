@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReportCardGenerator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">ReportCardGenerator</span>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Home Section -->
+        <div id="home">
+            <button id="addStudentButton" class="btn btn-success mb-3">Add Student</button>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Admission Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Add Student Section -->
+        <div id="add-student" class="d-none">
+            <h2>Add Student</h2>
+            <form id="studentForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Student Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="fatherName" class="form-label">Father's Name</label>
+                    <input type="text" class="form-control" id="fatherName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="admissionNumber" class="form-label">Admission Number</label>
+                    <input type="text" class="form-control" id="admissionNumber" required>
+                </div>
+                <div class="mb-3">
+                    <label for="class" class="form-label">Class</label>
+                    <input type="text" class="form-control" id="class" required>
+                </div>
+                <div class="mb-3">
+                    <label for="section" class="form-label">Section</label>
+                    <input type="text" class="form-control" id="section" required>
+                </div>
+
+                <h5>Marks (Out of 50)</h5>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="subject1_exam1">Subject 1 Exam 1</label>
+                        <input type="number" class="form-control" id="subject1_exam1" min="0" max="50" required>
+                    </div>
+                    <div class="col">
+                        <label for="subject1_exam2">Subject 1 Exam 2</label>
+                        <input type="number" class="form-control" id="subject1_exam2" min="0" max="50" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="subject2_exam1">Subject 2 Exam 1</label>
+                        <input type="number" class="form-control" id="subject2_exam1" min="0" max="50" required>
+                    </div>
+                    <div class="col">
+                        <label for="subject2_exam2">Subject 2 Exam 2</label>
+                        <input type="number" class="form-control" id="subject2_exam2" min="0" max="50" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="subject3_exam1">Subject 3 Exam 1</label>
+                        <input type="number" class="form-control" id="subject3_exam1" min="0" max="50" required>
+                    </div>
+                    <div class="col">
+                        <label for="subject3_exam2">Subject 3 Exam 2</label>
+                        <input type="number" class="form-control" id="subject3_exam2" min="0" max="50" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="subject4_exam1">Subject 4 Exam 1</label>
+                        <input type="number" class="form-control" id="subject4_exam1" min="0" max="50" required>
+                    </div>
+                    <div class="col">
+                        <label for="subject4_exam2">Subject 4 Exam 2</label>
+                        <input type="number" class="form-control" id="subject4_exam2" min="0" max="50" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="subject5_exam1">Subject 5 Exam 1</label>
+                        <input type="number" class="form-control" id="subject5_exam1" min="0" max="50" required>
+                    </div>
+                    <div class="col">
+                        <label for="subject5_exam2">Subject 5 Exam 2</label>
+                        <input type="number" class="form-control" id="subject5_exam2" min="0" max="50" required>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-secondary" id="cancelButton">Cancel</button>
+                <button type="button" class="btn btn-primary" id="saveButton">Save and Create Report Card</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
